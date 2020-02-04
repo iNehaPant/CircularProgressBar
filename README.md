@@ -1,4 +1,6 @@
 # CircularProgressBar
-Show Two Circular Progress Bar. \n
-App is Using MVVM Design pattern. \n
+Show Two Circular Progress Bar.
+
+App is Using MVVM Design pattern. 
+
 Testing is above 80%
