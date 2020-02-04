@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kV4-Vj-F87">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Circular Progress Bar View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="CircularProgressBar" id="BYZ-38-t0r" customClass="CircularProgressBarViewController" customModule="CircularProgressBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFs-0R-Lsl">
+                                <rect key="frame" x="0.0" y="149" width="375" height="379"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JPb-qF-bDe">
+                                        <rect key="frame" x="10" y="1" width="355" height="377"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tnc-eO-UoM" customClass="CircularProgressBarView" customModule="CircularProgressBar" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="125.66666666666667"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oee-BN-P7T" customClass="CircularProgressBarView" customModule="CircularProgressBar" customModuleProvider="target">
+                                                        <rect key="frame" x="22" y="16" width="128.66666666666666" height="93.666666666666671"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="phs-Ps-eiV">
+                                                                <rect key="frame" x="14.333333333333343" y="8" width="100" height="77.666666666666671"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="monthly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcy-lj-coG">
+                                                                        <rect key="frame" x="17.333333333333329" y="0.0" width="65.333333333333329" height="20.333333333333332"/>
+                                                                        <accessibility key="accessibilityConfiguration" identifier="monthlyAccLbl"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="259" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zt1-Ku-J1A">
+                                                                        <rect key="frame" x="26.666666666666661" y="24.333333333333343" width="46.333333333333343" height="29"/>
+                                                                        <accessibility key="accessibilityConfiguration" identifier="milesDigitAccLbl"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="29" id="2I5-zR-F1P"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="miles left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivw-lB-sMu">
+                                                                        <rect key="frame" x="0.0" y="57.33333333333335" width="100" height="20.333333333333336"/>
+                                                                        <accessibility key="accessibilityConfiguration" identifier="milesLeftAccLbl"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="iEy-J4-3CU"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="phs-Ps-eiV" firstAttribute="top" secondItem="oee-BN-P7T" secondAttribute="topMargin" id="Vp6-3l-4gN"/>
+                                                            <constraint firstItem="phs-Ps-eiV" firstAttribute="centerX" secondItem="oee-BN-P7T" secondAttribute="centerX" id="goI-dJ-QdL"/>
+                                                            <constraint firstItem="phs-Ps-eiV" firstAttribute="centerY" secondItem="oee-BN-P7T" secondAttribute="centerY" id="jZX-DN-yNs"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="oee-BN-P7T" firstAttribute="top" secondItem="Tnc-eO-UoM" secondAttribute="top" constant="16" id="2rK-EL-XaD"/>
+                                                    <constraint firstItem="oee-BN-P7T" firstAttribute="centerX" secondItem="Tnc-eO-UoM" secondAttribute="centerX" id="3Hl-qT-6sJ"/>
+                                                    <constraint firstItem="oee-BN-P7T" firstAttribute="leading" secondItem="Tnc-eO-UoM" secondAttribute="leading" constant="22" id="Vgy-iN-VC2"/>
+                                                    <constraint firstItem="oee-BN-P7T" firstAttribute="centerY" secondItem="Tnc-eO-UoM" secondAttribute="centerY" id="fSI-SD-lGp"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E6l-05-YkX" customClass="CircularProgressBarView" customModule="CircularProgressBar" customModuleProvider="target">
+                                                <rect key="frame" x="182.66666666666663" y="0.0" width="172.33333333333337" height="127.33333333333333"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ7-YZ-lE2" customClass="CircularProgressBarView" customModule="CircularProgressBar" customModuleProvider="target">
+                                                        <rect key="frame" x="22" y="16" width="128.33333333333334" height="95.333333333333329"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="org-mQ-vfu">
+                                                                <rect key="frame" x="14" y="5" width="100" height="85.333333333333329"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="battery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQF-Zv-BKC">
+                                                                        <rect key="frame" x="21.000000000000004" y="0.0" width="58.333333333333343" height="20.333333333333332"/>
+                                                                        <accessibility key="accessibilityConfiguration" identifier="batteryAccLbl"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8899" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5Z-Bd-8co">
+                                                                        <rect key="frame" x="18" y="28.333333333333343" width="64" height="28.666666666666671"/>
+                                                                        <accessibility key="accessibilityConfiguration" identifier="chargeDigitAccLbl"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="charge left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8j-nK-Onq">
+                                                                        <rect key="frame" x="0.0" y="65" width="100" height="20.333333333333329"/>
+                                                                        <accessibility key="accessibilityConfiguration" identifier="chargeAccLbl"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="bZ9-AK-mI3"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="org-mQ-vfu" firstAttribute="centerX" secondItem="ZQ7-YZ-lE2" secondAttribute="centerX" id="ARd-ha-VUW"/>
+                                                            <constraint firstItem="org-mQ-vfu" firstAttribute="top" secondItem="ZQ7-YZ-lE2" secondAttribute="top" constant="4.9999999999998863" id="C8p-Wc-Ij6"/>
+                                                            <constraint firstItem="org-mQ-vfu" firstAttribute="centerY" secondItem="ZQ7-YZ-lE2" secondAttribute="centerY" id="HD8-Da-fgw"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="ZQ7-YZ-lE2" firstAttribute="top" secondItem="E6l-05-YkX" secondAttribute="top" constant="16" id="5ue-Fp-lc7"/>
+                                                    <constraint firstItem="ZQ7-YZ-lE2" firstAttribute="centerY" secondItem="E6l-05-YkX" secondAttribute="centerY" id="7is-O6-rVf"/>
+                                                    <constraint firstItem="ZQ7-YZ-lE2" firstAttribute="leading" secondItem="E6l-05-YkX" secondAttribute="leading" constant="22" id="B0Y-E3-hJR"/>
+                                                    <constraint firstItem="ZQ7-YZ-lE2" firstAttribute="centerX" secondItem="E6l-05-YkX" secondAttribute="centerX" id="hF7-8G-uWk"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="JPb-qF-bDe" firstAttribute="top" secondItem="KFs-0R-Lsl" secondAttribute="top" constant="1" id="5fh-x4-cf1"/>
+                                    <constraint firstAttribute="bottom" secondItem="JPb-qF-bDe" secondAttribute="bottom" constant="1" id="InF-X2-rAh"/>
+                                    <constraint firstItem="JPb-qF-bDe" firstAttribute="leading" secondItem="KFs-0R-Lsl" secondAttribute="leading" constant="10" id="P83-s1-wKH"/>
+                                    <constraint firstAttribute="trailing" secondItem="JPb-qF-bDe" secondAttribute="trailing" constant="10" id="kR3-pb-q0f"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KFs-0R-Lsl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="61" id="Dyg-cY-nit"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KFs-0R-Lsl" secondAttribute="bottom" constant="250" id="GSP-JE-PTH"/>
+                            <constraint firstItem="KFs-0R-Lsl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="srL-kh-MIq"/>
+                            <constraint firstAttribute="trailing" secondItem="KFs-0R-Lsl" secondAttribute="trailing" id="v5H-Cp-dSA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VjP-6i-A3R">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="arrow.clockwise" catalog="system" id="xfV-eJ-cQe">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mpa-ju-u0k">
+                                <rect key="frame" x="287" y="0.0" width="72" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="refreshAccLbl"/>
+                                <state key="normal" image="arrow.clockwise" catalog="system"/>
+                                <connections>
+                                    <action selector="refereshActionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vf6-LA-zDG"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="containerView" destination="KFs-0R-Lsl" id="SL4-Fc-VGL"/>
+                        <outlet property="energyCircularLbl" destination="L5Z-Bd-8co" id="CWZ-By-LS5"/>
+                        <outlet property="energyCircularProgress" destination="ZQ7-YZ-lE2" id="xnG-iY-KYG"/>
+                        <outlet property="milesCircularLbl" destination="zt1-Ku-J1A" id="fFa-kh-fJf"/>
+                        <outlet property="milesCircularProgress" destination="oee-BN-P7T" id="9wH-vP-dpm"/>
+                        <outlet property="outerEnergyView" destination="Tnc-eO-UoM" id="WID-rF-TdO"/>
+                        <outlet property="outerMilesView" destination="E6l-05-YkX" id="Xp8-4c-Gra"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="997.10144927536237" y="33.423913043478265"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5Sx-aT-HVO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kV4-Vj-F87" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ALa-uZ-Xrt">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="l71-O1-Bfc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="so7-HM-yYS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86.956521739130437" y="33.482142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="56" height="64"/>
+    </resources>
+</document>

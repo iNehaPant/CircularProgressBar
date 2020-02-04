@@ -1,0 +1,43 @@
+{
+  "username": "test@evezy.co.uk",
+  "email": "test@evezy.co.uk",
+  "profile": {
+    "first_name": "John",
+    "last_name": "Doe",
+    "hours_available": "100"
+  },
+  "bookings": [
+    {
+      "id": 955,
+      "start_location": {
+        "id": 3,
+        "name": "Vinyl Cafe, London"
+      },
+      "start_time": "2019-07-05T13:00:00+01:00",
+      "car_class": {
+        "id": 9,
+        "label": "Tesla Model 3 SR+"
+      },
+      "car": {
+        "id": 213,
+        "make": "Tesla",
+        "model": "Model 3 SR+",
+        "registration_number": "EV19 TST",
+        "image": null,
+        "real_world_range": 220,
+        "last_energy_level": "72",
+        "ev_access": [
+          "tesla"
+        ]
+      },
+      "real_start_time": "2019-07-05T13:00:00+01:00",
+      "subscription_miles_left": "747"
+    }
+  ],
+  "userhours": [
+    {
+      "car_class": 9,
+      "hours_available": "100.0"
+    }
+  ]
+}
