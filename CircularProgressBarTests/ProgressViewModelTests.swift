@@ -93,7 +93,7 @@ class ProgressViewModelTests: XCTestCase {
     func test_booking_view_model() {
         guard let bookingsData = UserModelUtility().getStubBookingJSON() else {return}
         let data = UserModelUtility().getBookingViewModel(bookings: bookingsData)
-        if let bookings: BookingViewModel = data?.first {
+        if let bookings: BookingModel = data?.first {
             XCTAssertEqual(bookings.subscriptionMilesLeft, 747)
             XCTAssertEqual(bookings.lastEnergyLevel, 72.0)
         }

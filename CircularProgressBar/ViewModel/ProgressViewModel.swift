@@ -25,7 +25,7 @@ class ProgressViewModel {
         }
     }
     //Customised User Data Booking View Model
-    var bookingViewModel: BookingViewModel! {
+    var bookingViewModel: BookingModel! {
         didSet {
             showProgressBar?()
         }
@@ -54,17 +54,7 @@ class ProgressViewModel {
     }
     //Process Model Data
     func processBookingData(booking: [Booking]) {
-        var subscriptionMiles = 0.0
-        var energyLevel = 0.0
-        if let firstObj = booking.first {
-            if let sub = firstObj.subscriptionMilesLeft {
-                subscriptionMiles = Double(sub)!
-            }
-            if let eneLevel = firstObj.car.lastEnergyLevel {
-                energyLevel = Double(eneLevel)!
-            }
-        }
-        self.bookingViewModel =  BookingViewModel(subscriptionMilesLeft: subscriptionMiles, lastEnergyLevel: energyLevel)
+        self.bookingViewModel =  BookingModel(model: booking.first)
     }
 }
 

@@ -21,18 +21,10 @@ class UserModelUtility {
         return nil
     }
     
-    func getBookingViewModel(bookings : [Booking]) -> [BookingViewModel]! {
-        var array = [BookingViewModel]()
+    func getBookingViewModel(bookings : [Booking]) -> [BookingModel]! {
+        var array = [BookingModel]()
         for booking in bookings {
-            var subscriptionMiles = 0.0
-                   var energyLevel = 0.0
-            if let sub = booking.subscriptionMilesLeft {
-                subscriptionMiles = Double(sub)!
-            }
-            if let eneLevel = booking.car.lastEnergyLevel {
-                energyLevel = Double(eneLevel)!
-            }
-            array.append(BookingViewModel(subscriptionMilesLeft: subscriptionMiles, lastEnergyLevel: energyLevel))
+             array.append(BookingModel(model: booking))
         }
         return array
     }
