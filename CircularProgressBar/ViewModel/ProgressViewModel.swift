@@ -9,12 +9,12 @@ import Foundation
 
 class ProgressViewModel {
     
-    let networkManager: NetworkProtocols
+    let networkManager: NetworkProtocol
     var showErrorMessage:(() -> Void)?
     var showProgressBar: (() -> Void)?
     var updateLoadingStatus: (() -> Void)?
     
-    init( networkService: NetworkProtocols = NetworkManager()) {
+    init( networkService: NetworkProtocol = NetworkManager()) {
         self.networkManager = networkService
     }
     

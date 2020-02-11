@@ -100,7 +100,7 @@ class ProgressViewModelTests: XCTestCase {
     }
 }
 
-class MockApiService: NetworkProtocols {
+class MockApiService: NetworkProtocol {
     
     var isFetchUserBookingsCalled = false
     var completeBookings: [Booking] = [Booking]()

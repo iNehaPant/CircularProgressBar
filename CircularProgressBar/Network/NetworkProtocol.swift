@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol NetworkProtocols {
+protocol NetworkProtocol {
     //Result is the collection of Users
     func fetchUsersBooking(completion: @escaping (Result <[Booking], NetworkError>) -> Void)
 

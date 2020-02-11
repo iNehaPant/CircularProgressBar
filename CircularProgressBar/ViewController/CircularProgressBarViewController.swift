@@ -30,20 +30,20 @@ class CircularProgressBarViewController: UIViewController {
     
     func initViewModel() {
         //show progressBar data
-        showProgressBar()
+        initProgressBar()
         
         //show error messgae
-        showErrorMessage()
+        initErrorMessage()
         
         //Loading Animator
-        updateLoadingStatus()
+        initLoadingStatus()
         
         //Fetch network data
         viewModel.fetchUserData()
     }
     
     //MARK: Show Progress bar UI
-    func showProgressBar() {
+    func initProgressBar() {
         viewModel.showProgressBar = {[weak self] in
             guard let self = self else { return }
             DispatchQueue.main.async {
@@ -61,7 +61,7 @@ class CircularProgressBarViewController: UIViewController {
         }
     }
     //MARK: Alert Message
-    func showErrorMessage() {
+    func initErrorMessage() {
         viewModel.showErrorMessage = {[weak self] in
             guard let self = self else { return }
             DispatchQueue.main.async {
@@ -73,7 +73,7 @@ class CircularProgressBarViewController: UIViewController {
         }
     }
     //MARK: AnimationStatus
-    func updateLoadingStatus() {
+    func initLoadingStatus() {
         viewModel.updateLoadingStatus = {[weak self] in
             guard let self = self else {return}
             DispatchQueue.main.async {

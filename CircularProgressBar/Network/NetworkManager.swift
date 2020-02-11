@@ -14,7 +14,7 @@ enum NetworkError: String, Error {
 
 }
 
-class NetworkManager: NetworkProtocols {
+class NetworkManager: NetworkProtocol {
     //MARK: Fetching User Booking Info
        func fetchUsersBooking(completion: @escaping (Result <[Booking], NetworkError>) -> Void) {
            let task = URLSession.shared.dataTask(with: endPoint) {(data, response, error) in
